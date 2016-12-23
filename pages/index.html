@@ -3,160 +3,211 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <link rel="apple-touch-icon" sizes="57x57" href="../static/icons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="../static/icons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="../static/icons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="../static/icons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="../static/icons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="../static/icons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="../static/icons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="../static/icons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="../static/icons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="../static/icons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../static/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="../static/icons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../static/icons/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="../static/icons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+  <link rel="apple-touch-icon" sizes="57x57" href="../static/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../static/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../static/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../static/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../static/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../static/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../static/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../static/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../static/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="../static/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../static/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../static/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../static/icons/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="../static/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
 
-    <title>Calculadora Ganancias 2017</title>
+  <title>Calculadora Ganancias 2017</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Core CSS -->
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="../dist/css/calc.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="../dist/css/calc.min.css" rel="stylesheet">
 
-    </head>
+</head>
 
-    <body>
+<body>
 
-        <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.5&appId=1751939325033994";
-          fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.5&appId=1751939325033994";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 
-      <div class="container">                         
-          <div id="share">
-            <span class="share facebook">
-                <div class="fb-share-button" data-href="http://artools.github.io/ganancias2017" data-layout="button_count"></div>
-            </span>
-            <span class="share twitter">
-                <a href="https://twitter.com/share" class="twitter-share-button" data-via="_kumaaa" data-hashtags="ganancias2017">Tweet</a>
-            </span>
-            <span class="copyright">
-                <span class="fondo-copyright">datos por <a href="https://twitter.com/arisetton" target="_blank">arisetton</a> y
-                  desarrollo por <a href="https://twitter.com/_kumaaa" target="_blank">_kumaaa</a> </span>
-            </span>
-        </div>
-        <div class="row">
-         <div class="col-lg-12">
-          <h1 class="page-header">Calculadora Ganancias 2017
-          </h1>
+  <div class="container">                         
+    <div id="share">
+      <span class="share facebook">
+        <div class="fb-share-button" data-href="http://artools.github.io/ganancias2017" data-layout="button_count"></div>
+      </span>
+      <span class="share twitter">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="_kumaaa" data-hashtags="ganancias2017">Tweet</a>
+      </span>
+      <span class="copyright">
+        <span class="fondo-copyright">datos por <a href="https://twitter.com/arisetton" target="_blank">arisetton</a> y
+          desarrollo por <a href="https://twitter.com/_kumaaa" target="_blank">_kumaaa</a> </span>
+        </span>
+      </div>
+      <div class="row">
+       <div class="col-lg-12">
+        <h1 class="page-header">Calculadora Ganancias 2017
+        </h1>
       </div>
       <!-- /.col-lg-12 -->
-  </div>
-  <div class="row">
-    <div class="col-lg-6">
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
         <div class="panel panel-default">
-            <div class="panel-heading">
-               Datos
-           </div>
-           <div class="panel-body">
-            <div class="row">
-                <div class="col-lg-12">
-                    <form role="form">
-                        <div class="form-group">
-                            <label>Sueldo Bruto</label>
-                            <div class="form-group input-group">
-                                <span class="input-group-addon">$</span>
-                                <input id="sueldoBruto" type="text" class="form-control">
-                                <span class="input-group-addon">.00</span>
-                            </div>
-                            <p class="help-block">Ingrese su Sueldo Bruto</p>
-                        </div>
-                        <label>Conyuge a Cargo</label>
-                        <div class="radio">
-                         <label> <input type="radio" name="conyuge" id="No"
-                             value="0" checked>No
-                         </label>
-                     </div>
-                     <div class="radio">
-                         <label> <input type="radio" name="conyuge" id="Si"
-                            value="1">Si
-                        </label>
-                    </div>
-                        <div class="form-group">
-                            <label>Cantidad de Hijos ( Menores de 18 años )</label>
-                            <select class="form-control" id="hijos">
-                                <option>0</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
-                                <option>8</option>
-                            </select>
-                        </div>
-                        <div class="form-group" align="right">
-                           <button id="calcular" type="button" class="btn btn-success">Calcular</button>
-                       </div>
-                   </form>
-               </div>
-           </div>
-           <!-- /.row (nested) -->
+          <div class="panel-heading">
+           Datos
+         </div>
+         <div class="panel-body">
+          <div class="row">
+            <div class="col-lg-12">
+              <form role="form">
+                <div class="form-group">
+                  <label>Sueldo Bruto</label>
+                  <div class="form-group input-group">
+                    <span class="input-group-addon">$</span>
+                    <input id="sueldoBruto" type="text" class="form-control">
+                    <span class="input-group-addon">.00</span>
+                  </div>
+                  <p class="help-block">Ingrese su Sueldo Bruto</p>
+                </div>
+
+                <div class="col-lg-4">
+                  <div class="form-group">
+                    <label>Conyuge a Cargo</label>
+                    <br>
+                    <label class="radio-inline"> <input type="radio" name="conyuge" id="No"
+                     value="0" checked>No
+                   </label>
+                   <label class="radio-inline"> <input type="radio" name="conyuge" id="Si"
+                    value="1">Si
+                  </label>
+                </div>
+
+              </div>
+
+              <div class="col-lg-4">
+
+                <div class="form-group">
+                  <label>Jubilado</label>
+                  <br>
+                  <label class="radio-inline"> <input type="radio" name="jubilado" id="No"
+                   value="0" checked>No
+                 </label>
+                 <label class="radio-inline"> <input type="radio" name="jubilado" id="Si"
+                  value="1">Si
+                </label>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+
+
+              <div class="form-group">
+                <label>Patagónico</label>
+                <br>
+                <label class="radio-inline"> <input type="radio" name="patagonico" id="No"
+                 value="0" checked>No
+               </label>
+               <label class="radio-inline"> <input type="radio" name="patagonico" id="Si"
+                value="1">Si
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Cantidad de Hijos ( Menores de 18 años )</label>
+            <select class="form-control" id="hijos">
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+            </select>
+          </div>
+
+
+          <div class="form-group">
+           <label>Deducción Alquiler</label>
+           <div class="form-group input-group">
+            <span class="input-group-addon">$</span>
+            <input id="alquiler" type="text" class="form-control">
+            <span class="input-group-addon">.00</span>
+          </div>
+          <p class="help-block">Ingrese su Alquiler Mensual</p>
+        </div>
+
+
+
+        <div class="form-group" align="right">
+         <button id="calcular" type="button" class="btn btn-success">Calcular</button>
        </div>
-       <!-- /.panel-body -->
+     </form>
    </div>
-   <!-- /.panel -->
+ </div>
+ <!-- /.row (nested) -->
+</div>
+<!-- /.panel-body -->
+</div>
+<!-- /.panel -->
 </div>
 <!-- /.col-lg-6 -->
 <div class="col-lg-6">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-           Resultado
-       </div>
-       <div class="panel-body">
-        <div class="row">
-            <div class="col-lg-12">
-              <div class="form-group">
-                <label>Impuesto Anual</label>
-                <p class="text-danger"  id="impuestoAnual"></p>
-            </div>
-            <div class="form-group">
-                <label>Impuesto Mensual</label>
-                <p class="text-danger"  id="impuestoMensual"></p>
-            </div>
-            <div class="form-group">
-                <label>Alicuota</label>
-                <p class="text-danger" id="alicuota"></p>
-            </div>
-            <div class="form-group">
-                <label>Sueldo en Mano</label>
-                <p class="text-success" id="sueldoEnMano">
-                </p>
-            </div>
-
+  <div class="panel panel-default">
+    <div class="panel-heading">
+     Resultado
+   </div>
+   <div class="panel-body">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="form-group">
+          <label>Impuesto Anual</label>
+          <p class="text-danger"  id="impuestoAnual"></p>
         </div>
-        <!-- /.col-lg-6 (nested) -->
+        <div class="form-group">
+          <label>Impuesto Mensual</label>
+          <p class="text-danger"  id="impuestoMensual"></p>
+        </div>
+        <div class="form-group">
+          <label>Alicuota</label>
+          <p class="text-danger" id="alicuota"></p>
+        </div>
+        <div class="form-group">
+          <label>Alicuota Marginal que aplica</label>
+          <p class="text-danger" id="alicuotaMarginal"></p>
+        </div>
+        <div class="form-group">
+          <label>Sueldo en Mano</label>
+          <p class="text-success" id="sueldoEnMano">
+          </p>
+        </div>
+
+      </div>
+      <!-- /.col-lg-6 (nested) -->
     </div>
     <!-- /.row (nested) -->
-</div>
-<!-- /.panel-body -->
+  </div>
+  <!-- /.panel-body -->
 </div>
 <!-- /.panel -->
 </div>
@@ -167,13 +218,13 @@
 
 <script>
 	
-   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-ga('create', 'UA-74040569-1', 'auto');
-ga('send', 'pageview');
+ ga('create', 'UA-74040569-1', 'auto');
+ ga('send', 'pageview');
 
 </script>
 
