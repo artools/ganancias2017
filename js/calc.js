@@ -54,4 +54,4 @@ var topesEscalas = [2e4, 4e4, 6e4, 8e4, 12e4, 16e4, 24e4, 32e4, 99999999],
     HIJO = 24432,
     TOPE_APORTES = 10896.32,
     TOPE_JUBILADO = 407592,
-    TOPE_ALQUILER = 51967;s
+    TOPE_ALQUILER = 51967;
