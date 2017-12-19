@@ -16,24 +16,39 @@ function calcular() {
     mniTotal = (mniConDeduccionEspecial + CONYUGE * isConyuge + HIJO * cantHijos + deduccionAlquiler + deduccionHipotecario) * (1 - isJubilado) + isJubilado * (TOPE_JUBILADO + deduccionAlquiler + deduccionHipotecario),
         montoImponibleAplicable = 0,
         mniTotal < sueldoNetoAnual && (montoImponibleAplicable = sueldoNetoAnual - mniTotal);
-    for (var n = [0, 0, 0, 0, 0, 0, 0, 0, 0], o = 0; o < n.length && (n[o] = calcularValorEscala(o, montoImponibleAplicable), n[o] == fijosEscalas[o]); o++);
-    for (var p = o, impuestoAnual = 0, o = 0; o < n.length; o++) impuestoAnual += n[o];
-    impuestoAnual = impuestoAnual.toFixed(2), $("#impuestoAnual").text("$" + impuestoAnual);
+    
+    var result = calcularImpuesto(montoImponibleAplicable);
+    impuestoAnual = result.value.toFixed(2), $("#impuestoAnual").text("$" + impuestoAnual);
+
     var impuestoMensual = (impuestoAnual / 13).toFixed(2);
     $("#impuestoMensual").text("$" + impuestoMensual);
     var alicuota = impuestoMensual / sueldoBruto * 100;
     $("#alicuota").text(alicuota.toFixed(2) + "%");
-    var alicuotaMarginal = 0 == alicuota ? 0 : 100 * porcentajesEscalas[p];
+    var alicuotaMarginal = 0 == alicuota ? 0 : 100 * porcentajesEscalas[result.escala];
     $("#alicuotaMarginal").text(alicuotaMarginal.toFixed(2) + "%");
     var sueldoEnMano = sueldoNeto - impuestoMensual;
     $("#sueldoEnMano").text("$" + Math.round(sueldoEnMano) + ".00")
 }
 
-function calcularValorEscala(a, b) {
-    var c = 0,
-        d = 0;
-    return a > 0 && (d = topesEscalas[a - 1]), c = b < topesEscalas[a] ? (b - d) * porcentajesEscalas[a] : fijosEscalas[a]
+function calcularImpuesto(monto) {
+    var i = 0;
+    var result = {};
+    var value = 0;
+    //Mientras no supere el tope de la escala voy sumando el exedente
+    while(monto > topesEscalas[i]) {
+        var diff = i == 0 ? topesEscalas[i] : topesEscalas[i] - topesEscalas[i - 1];
+        value += diff * porcentajesEscalas[i];
+        i++;
+    }
+
+    diff = i == 0 ? monto : monto - topesEscalas[i - 1];
+    value += diff * porcentajesEscalas[i];
+
+    result.value = value;
+    result.escala = i;
+    return result;
 }
+
 $(document).ready(function() {
     $("#calcular").on("click", function() {
         calcular()
@@ -49,12 +64,11 @@ $(document).ready(function() {
 });
 var topesEscalas = [2e4, 4e4, 6e4, 8e4, 12e4, 16e4, 24e4, 32e4, 99999999],
     porcentajesEscalas = [.05, .09, .12, .15, .19, .23, .27, .31, .35],
-    fijosEscalas = [1e3, 1800, 2400, 3e3, 7600, 9200, 21600, 24800],
-    MINIMO_NO_IMPONIBLE = 51967,
-    ADICIONAL_4TA_CATEGORIA = 249441.6,
-    CONYUGE = 48447,
-    HIJO = 24432,
-    TOPE_APORTES = 10896.32,
-    TOPE_JUBILADO = 407592,
+    MINIMO_NO_IMPONIBLE = 66917.91,
+    ADICIONAL_4TA_CATEGORIA = 321205.968,
+    CONYUGE = 62385.2,
+    HIJO = 31461.09,
+    TOPE_APORTES = 13926.16,
+    TOPE_JUBILADO = 407592, 
     TOPE_ALQUILER = 51967,
 	TOPE_HIPOTECARIO = 20000;
