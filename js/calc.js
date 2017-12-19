@@ -34,7 +34,6 @@ function calcularImpuesto(monto) {
     var i = 0;
     var result = {};
     var value = 0;
-    //Mientras no supere el tope de la escala voy sumando el exedente
     while(monto > topesEscalas[i]) {
         var diff = i == 0 ? topesEscalas[i] : topesEscalas[i] - topesEscalas[i - 1];
         value += diff * porcentajesEscalas[i];
@@ -62,7 +61,7 @@ $(document).ready(function() {
         })
     })
 });
-var topesEscalas = [2e4, 4e4, 6e4, 8e4, 12e4, 16e4, 24e4, 32e4, 99999999],
+var topesEscalas = [25800, 51600, 77400, 103200, 154800, 206400, 309600, 412800, 99999999],
     porcentajesEscalas = [.05, .09, .12, .15, .19, .23, .27, .31, .35],
     MINIMO_NO_IMPONIBLE = 66917.91,
     ADICIONAL_4TA_CATEGORIA = 321205.968,
